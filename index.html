@@ -10,26 +10,34 @@
 </head>
 <body>
     <header>
-        <h1>Guided Conditional Diffusion for Controllable Traffic Simulation</h1>
+        <h1>Direct Preference Optimization-Enhanced Multi-Guided Diffusion Model for Traffic Scenario Generation</h1>
         <div class="authors">
-            <!-- Add author names here -->
+            Anonymous ECCV 2024 Submission<!-- Add author names here -->
         </div>
         <div class="conference">
-            International Conference on Robotics and Automation (ICRA) 2023
+            Anonymous ECCV 2024 Submission
         </div>
     </header>
     
     <section class="abstract">
         <h2>Abstract</h2>
         <p>
-            <!-- Add the abstract text here -->
+            Diffusion-based models are recognized for their effectiveness in using real-world driving data to generate realistic and diverse traffic scenarios. 
+            These models employ guided sampling to incorporate specific traffic preferences and enhance scenario realism. 
+            However, guiding the sampling process to conform to traffic rules and preferences can result in deviations from real-world traffic priors and potentially leading to unrealistic behaviors.
+            To address this challenge, we introduce a multi-guided diffusion model that utilizes a novel training strategy to closely adhere to traffic priors, even when employing various combinations of guides. 
+            This model adopts a multi-task learning framework, enabling a single diffusion model to process various guide inputs. 
+            For increased guided sampling precision, our model is fine-tuned using the Direct Preference Optimization (DPO) algorithm. 
+            This algorithm optimizes preferences based on guide scores, effectively navigating the complexities and challenges associated with the expensive and often non-differentiable gradient calculations during the guided sampling fine-tuning process. 
+            Evaluated using the nuScenes dataset our model provides a strong baseline for balancing realism, diversity and controllability in the traffic scenario generation.
         </p>
     </section>
     
     <section class="figures">
-        <!-- Replace with your image and set alternative text -->
-        <img src="path_to_your_image.png" alt="Controllable Traffic Generation Diagram">
-        <!-- Add figure captions here if necessary -->
+        <h2>Image</h2>
+        <p>
+            COMING SOON
+        </p>
     </section>
     
     <section class="content">
