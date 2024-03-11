@@ -99,7 +99,7 @@
             </div>
 
             <div class="section-title"></div>
-            <div class="teaser-image">
+            <div class="content">
                 <img src="Figuire1.pdf" style="width:90%;">
                 Diffusion-based models are recognized for their effectiveness in using real-world driving data to generate realistic and diverse traffic scenarios. These models employ guided sampling to incorporate specific traffic preferences and enhance scenario realism. However, guiding the sampling process to conform to traffic rules and preferences can result in deviations from real-world traffic priors and potentially leading to unrealistic behaviors. To address this challenge, we introduce a multi-guided diffusion model that utilizes a novel training strategy to closely adhere to traffic priors, even when employing various combinations of guides. This model adopts a multi-task learning framework, enabling a single diffusion model to process various guide inputs. For increased guided sampling precision, our model is fine-tuned using the Direct Preference Optimization (DPO) algorithm. This algorithm optimizes preferences based on guide scores, effectively navigating the complexities and challenges associated with the expensive and often non-differentiable gradient calculations during the guided sampling fine-tuning process. Evaluated using the nuScenes dataset our model provides a strong baseline for balancing realism, diversity and controllability in the traffic scenario generation.
 
@@ -107,21 +107,22 @@
 
 
             <div class="section-title">Guided Sampling</div>
+
             <div class="content">
                 Sample for guided sampling.
                 <img src="Figuire1.pdf" style="width:100%;">
-                <figure style="width: 32%;">
+                <figure style="width: 30%;">
                     <video class="centered" width="100%" controls muted loop autoplay>
                         <source src="test_sample_433_after_vid_000.mp4" type="video/mp4"/>
                     </video>
                     <p class="caption">samples</p>
                 </figure>
-                <figure style="width: 32%;">
+                <figure style="width: 30%;">
                     <video class="centered" width="100%" controls muted loop autoplay>
                         <source src="test_sample_433_after_vid_000.mp4" type="video/mp4"/>
                     </video>
                     <p class="caption">samples</p>
-                </figure><figure style="width: 32%;">
+                </figure><figure style="width: 30%;">
                     <video class="centered" width="100%" controls muted loop autoplay>
                         <source src="test_sample_433_after_vid_000.mp4" type="video/mp4"/>
                     </video>
