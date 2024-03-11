@@ -6,35 +6,38 @@
     <style>
         body {
             font-family: 'Arial', sans-serif;
-            background-color: #f4f4f4;
+            background-color: #e6e7e8; /* Soft grey background */
             padding: 20px;
             line-height: 1.6;
             color: #333;
+            max-width: 800px; /* Set a max-width for the content */
+            margin: auto; /* Center the content */
+        }
+
+        header, .abstract, .figures, .content {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
         }
 
         header {
-            background: #fff;
-            padding: 20px;
             text-align: center;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
         .authors, .conference {
             font-style: italic;
             color: #666;
+            text-align: center;
+            margin-bottom: 20px;
         }
 
-        .abstract, .figures, .content {
-            background: #fff;
-            margin: 20px 0;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-
-        .abstract h2, .figures h2 {
+        .abstract h2, .figures h2, .content h2 {
             color: #333;
             margin-bottom: 10px;
+            text-align: center;
         }
 
         /* Additional styles */
@@ -44,7 +47,6 @@
 <body>
     <header>
         <h1>Direct Preference Optimization-Enhanced Multi-Guided Diffusion Model for Traffic Scenario Generation</h1>
-
         <div class="conference">
             Anonymous ECCV 2024 Submission
         </div>
@@ -52,16 +54,9 @@
     
     <section class="abstract">
         <h2>Abstract</h2>
-        <img src="Figuire1.pdf" alt="Abstract visual representation" style="max-width:100%; height:auto;">
         <p>
-            Diffusion-based models are recognized for their effectiveness in using real-world driving data to generate realistic and diverse traffic scenarios. 
-            These models employ guided sampling to incorporate specific traffic preferences and enhance scenario realism. 
-            However, guiding the sampling process to conform to traffic rules and preferences can result in deviations from real-world traffic priors and potentially leading to unrealistic behaviors.
-            To address this challenge, we introduce a multi-guided diffusion model that utilizes a novel training strategy to closely adhere to traffic priors, even when employing various combinations of guides. 
-            This model adopts a multi-task learning framework, enabling a single diffusion model to process various guide inputs. 
-            For increased guided sampling precision, our model is fine-tuned using the Direct Preference Optimization (DPO) algorithm. 
-            This algorithm optimizes preferences based on guide scores, effectively navigating the complexities and challenges associated with the expensive and often non-differentiable gradient calculations during the guided sampling fine-tuning process. 
-            Evaluated using the nuScenes dataset our model provides a strong baseline for balancing realism, diversity and controllability in the traffic scenario generation.
+            Diffusion-based models are recognized for their effectiveness in using real-world driving data to generate realistic and diverse traffic scenarios...
+            <!-- Abstract text continues -->
         </p>
     </section>
     
@@ -71,15 +66,14 @@
             COMING SOON
         </p>
         <!-- Placeholder for future image -->
-        <!-- <img src="path_to_image.jpg" alt="Descriptive text about the image."> -->
     </section>
     
     <section class="content">
-        <h2>Video</h2></h2>
+        <h2>Video</h2>
         <p>
             COMING SOON
         </p>
-        <!-- Add additional content such as paragraphs or sub-sections here -->
+        <!-- Add additional content here -->
     </section>
     
     <!-- Additional sections or footer -->
@@ -87,4 +81,3 @@
     <!-- JavaScript if necessary -->
 </body>
 </html>
-
