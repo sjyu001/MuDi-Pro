@@ -1,50 +1,51 @@
 <!Doctype html>
 <html lang="en">
 <head>
-    <title>Project Title: An Overview</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <title>Direct Preference Optimization-Enhanced Multi-Guided Diffusion Model for Traffic Scenario Generation</title>
     <style>
-        body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
-        .container { max-width: 1200px; margin: auto; padding: 20px; }
-        .header, .footer { text-align: center; padding: 20px 0; }
-        .main-content { margin-top: 20px; }
-        img { max-width: 100%; height: auto; }
+        body { font-family: Arial, sans-serif; }
+        .section { padding: 20px; }
+        .blue-section { background-color: #DCEFF9; }
+        .grey-section { background-color: #F0F0F0; }
+        img { width: 100%; height: auto; }
+        .section-title { font-weight: bold; }
+        .container { width: 80%; margin: auto; }
+        .paper-button { display: block; background-color: blue; color: white; text-align: center; padding: 10px; margin-top: 20px; text-decoration: none; }
     </style>
 </head>
 <body>
-    <div class="header">
-        <h1>Project Title: An Overview</h1>
-        <p>Exploring Innovations in Technology</p>
-    </div>
-
     <div class="container">
-        <section class="authors">
-            <h2>Authors</h2>
-            <p>Author One, Author Two, Author Three</p>
-        </section>
+        <div class="section">
+            <h1>Direct Preference Optimization-Enhanced Multi-Guided Diffusion Model for Traffic Scenario Generation</h1>
+            <p>Anonymous ECCV 2024 Submission</p>
+            <a href="link-to-paper" class="paper-button">Paper</a>
+        </div>
 
-        <section class="project-overview">
-            <h2>Project Overview</h2>
-            <p>This project aims to explore innovative approaches in technology, focusing on the development of sustainable and efficient solutions. Through our research, we've identified key areas where technological advancements can significantly impact.</p>
-            <img src="Figuire1.pdf" alt="Project overview image">
-        </section>
+        <div class="section blue-section">
+            <h2 class="section-title">Controllable Traffic Generation (CTG)</h2>
+            <img src="Figuire1.pdf" alt="CTG Overview">
+            <p>Diffusion-based models are recognized for their effectiveness in using real-world driving data to generate realistic and diverse traffic scenarios. 
+                These models employ guided sampling to incorporate specific traffic preferences and enhance scenario realism. 
+                However, guiding the sampling process to conform to traffic rules and preferences can result in deviations from real-world traffic priors and potentially leading to unrealistic behaviors.
+                To address this challenge, we introduce a multi-guided diffusion model that utilizes a novel training strategy to closely adhere to traffic priors, even when employing various combinations of guides. This model adopts a multi-task learning framework, enabling a single diffusion model to process various guide inputs. For increased guided sampling precision, our model is fine-tuned using the Direct Preference Optimization (DPO) algorithm. This algorithm optimizes preferences based on guide scores, effectively navigating the complexities and challenges associated with the expensive and often non-differentiable gradient calculations during the guided sampling fine-tuning process. Evaluated using the nuScenes dataset our model provides a strong baseline for balancing realism, diversity and controllability in the traffic scenario generation.</p>
+        </div>
 
-        <section class="results">
-            <h2>Results</h2>
-            <p>Our findings reveal potential breakthroughs in the application of new technologies. We've successfully demonstrated the feasibility of our approach through various tests and simulations.</p>
-            <img src="results-image.jpg" alt="Results image">
-        </section>
+        <div class="section">
+            <h2 class="section-title">Speed Limit</h2>
+            <img src="Figuire1.pdf" alt="Speed Limit Comparison">
+            <p>Placeholder text for Speed Limit section...</p>
+        </div>
 
-        <section class="acknowledgments">
-            <h2>Acknowledgments</h2>
-            <p>We would like to thank everyone who contributed to this project, providing valuable insights and support throughout our research.</p>
-        </section>
-    </div>
+        <div class="section grey-section">
+            <h2 class="section-title">Target Speed</h2>
+            <img src="Figuire1.pdf" alt="Target Speed Comparison">
+            <p>Placeholder text for Target Speed section...</p>
+        </div>
 
-    <div class="footer">
-        <p>&copy; 2024 Project Team</p>
+        <!-- Repeat sections as necessary -->
+
     </div>
 </body>
 </html>
