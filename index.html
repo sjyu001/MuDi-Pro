@@ -2,45 +2,54 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Direct Preference Optimization-Enhanced Multi-Guided Diffusion Model for Traffic Scenario Generation</title>
+    <title>Controllable Traffic Simulation Page Design</title>
     <style>
         body {
             font-family: 'Arial', sans-serif;
-            background-color: #fff; /* White background */
+            background-color: #fff;
             margin: 0;
             padding: 0;
         }
 
-        header, .abstract, .figures, .content {
-            background: #fff;
+        .container {
+            width: 100%;
+            max-width: 1200px; 
+            margin: auto;
             padding: 20px;
-            margin: 20px auto;
-            max-width: 800px; /* Set a max-width for the content */
-            border-left: 5px solid #007BFF; /* Blue border for the class */
-            border-right: 5px solid #007BFF; /* Blue border for the class */
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
 
-        header {
-            border-top: 5px solid #007BFF; /* Blue border for the class */
-            text-align: center;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        .conference {
-            font-style: italic;
-            color: #666;
-            text-align: center;
+        .section-title {
+            border-bottom: 3px solid #007BFF;
+            padding-bottom: 10px;
             margin-bottom: 20px;
         }
 
-        .abstract h2, .figures h2, .content h2 {
-            color: #333;
+        .figures-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .figure {
+            width: 32%;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .figure img {
+            width: 100%;
+            height: auto;
+        }
+
+        .caption {
             text-align: center;
-            border-bottom: 2px solid #007BFF; /* Blue border for the headings */
-            display: inline-block;
-            margin: 0 auto 20px auto;
-            padding-bottom: 5px;
+            padding: 5px;
+            border-top: 1px solid #ddd;
+            background: #f9f9f9;
+        }
+
+        .content-description {
+            margin-bottom: 20px;
         }
 
         /* Additional styles */
@@ -48,46 +57,29 @@
     </style>
 </head>
 <body>
-    <header>
-        <h1>Direct Preference Optimization-Enhanced Multi-Guided Diffusion Model for Traffic Scenario Generation</h1>
-        <div class="conference">
-            Anonymous ECCV 2024 Submission
+    <div class="container">
+        <h1 class="section-title">Speed Limit</h1>
+        <p class="content-description">
+            In this scene, the vehicles are supposed to drive under the specified speed limit. BC+opt generates trajectories with a vehicle...
+            <!-- Description continues -->
+        </p>
+        <div class="figures-row">
+            <div class="figure">
+                <img src="path_to_image1.jpg" alt="BC+opt Results">
+                <div class="caption">BC+opt (speed limit violation: 0.224m/s)</div>
+            </div>
+            <div class="figure">
+                <img src="path_to_image2.jpg" alt="BITS+opt Results">
+                <div class="caption">BITS+opt (speed limit violation: 0.138m/s)</div>
+            </div>
+            <div class="figure">
+                <img src="path_to_image3.jpg" alt="CTG Results">
+                <div class="caption">CTG (speed limit violation: 0.101m/s)</div>
+            </div>
         </div>
-    </header>
-    
-    <section class="abstract">
-        <h2>Abstract</h2>
-        <img src="Figuire1.pdf" alt="Abstract visual representation" style="max-width:100%; height:auto;">
-        <p>
-            Diffusion-based models are recognized for their effectiveness in using real-world driving data to generate realistic and diverse traffic scenarios. 
-            These models employ guided sampling to incorporate specific traffic preferences and enhance scenario realism. 
-            However, guiding the sampling process to conform to traffic rules and preferences can result in deviations from real-world traffic priors and potentially leading to unrealistic behaviors.
-            To address this challenge, we introduce a multi-guided diffusion model that utilizes a novel training strategy to closely adhere to traffic priors, even when employing various combinations of guides. 
-            This model adopts a multi-task learning framework, enabling a single diffusion model to process various guide inputs. 
-            For increased guided sampling precision, our model is fine-tuned using the Direct Preference Optimization (DPO) algorithm. 
-            This algorithm optimizes preferences based on guide scores, effectively navigating the complexities and challenges associated with the expensive and often non-differentiable gradient calculations during the guided sampling fine-tuning process. 
-            Evaluated using the nuScenes dataset our model provides a strong baseline for balancing realism, diversity and controllability in the traffic scenario generation.
-        </p>
-    </section>
-    
-    <section class="figures">
-        <h2>Image</h2>
-        <p>
-            COMING SOON
-        </p>
-        <!-- Placeholder for future image -->
-    </section>
-    
-    <section class="content">
-        <h2>Video</h2>
-        <p>
-            COMING SOON
-        </p>
-        <!-- Add additional content here -->
-    </section>
-    
-    <!-- Additional sections or footer -->
-    
-    <!-- JavaScript if necessary -->
+        
+        <!-- Repeat the structure for other sections like 'Target Speed' -->
+
+    </div>
 </body>
 </html>
