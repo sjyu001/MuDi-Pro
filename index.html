@@ -6,28 +6,28 @@
     <style>
         body {
             font-family: 'Arial', sans-serif;
-            background-color: #e6e7e8; /* Soft grey background */
-            padding: 20px;
-            line-height: 1.6;
-            color: #333;
-            max-width: 800px; /* Set a max-width for the content */
-            margin: auto; /* Center the content */
+            background-color: #fff; /* White background */
+            margin: 0;
+            padding: 0;
         }
 
         header, .abstract, .figures, .content {
             background: #fff;
             padding: 20px;
-            border-radius: 8px;
+            margin: 20px auto;
+            max-width: 800px; /* Set a max-width for the content */
+            border-left: 5px solid #007BFF; /* Blue border for the class */
+            border-right: 5px solid #007BFF; /* Blue border for the class */
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            margin-bottom: 20px;
         }
 
         header {
+            border-top: 5px solid #007BFF; /* Blue border for the class */
             text-align: center;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
-        .authors, .conference {
+        .conference {
             font-style: italic;
             color: #666;
             text-align: center;
@@ -36,8 +36,11 @@
 
         .abstract h2, .figures h2, .content h2 {
             color: #333;
-            margin-bottom: 10px;
             text-align: center;
+            border-bottom: 2px solid #007BFF; /* Blue border for the headings */
+            display: inline-block;
+            margin: 0 auto 20px auto;
+            padding-bottom: 5px;
         }
 
         /* Additional styles */
