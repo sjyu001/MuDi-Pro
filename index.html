@@ -99,9 +99,8 @@
             </div>
 
             <div class="section-title"></div>
-            <div class="section-title">MuDi-Pro</div>
             <div class="teaser-image">
-                <img src="Figuire1.pdf" style="width:100%;">
+                <img src="Figuire1.pdf" style="width:90%;">
                 Diffusion-based models are recognized for their effectiveness in
                 using real-world driving data to generate realistic and diverse traffic scenarios. 
                 These models employ guided sampling to incorporate specific traffic preferences and
@@ -118,42 +117,21 @@
 
             </div>
 
-            <div class="section-title">Approach Overview</div>
 
-
-            <div class="section-title">Results</div>
+            <div class="section-title">Guided Sampling</div>
             <div class="content">
-                In the following interactive visualization, the naming of the
-                parts has been done manually. However, <strong>the model had no part
-                supervision during training</strong>. The semantic parts have
-                emerged naturally from reconstructing the geometry.
-
-                
-            </div>
-
-            <div class="section-title">Comparison to Primitive-based Methods</div>
-            <div class="content">
-                <p>
-                    We compare the representation power of Neural Parts to
-                    other primitive-based methods by evaluating the
-                    reconstruction quality with varying number of primitives on
-                    three datasets. We observe that our model is <strong>more
-                    geometrically accurate, more semantically consistent and
-                    yields more meaningful parts</strong> (i.e. primitives are
-                    identifiable parts such as thumbs, legs, wings, tires,
-                    etc.) compared to simpler primitives.
-                </p>
-            </div>
-
-            <div class="section-title">Semantic Consistency</div>
-            <div class="content">
-                We observe that Neural Parts consistently use the same
-                primitive for representing the same object part regardless of
-                the breadth of the part's motion. Notably, this
-                <strong>temporal consistency is an emergent property</strong>
-                of our method and <strong>not one that is enforced with any
-                kind of loss</strong>.
-                <video class="centered" width="100%" controls muted loop autoplay>
+                Sample for guided sampling.
+                <video class="centered" width="32%" controls muted loop autoplay>
+                    <source
+                        src="test_sample_433_after_vid_000.mp4"
+                        type="video/mp4" />
+                </video>
+                <video class="centered" width="32%" controls muted loop autoplay>
+                    <source
+                        src="test_sample_433_after_vid_000.mp4"
+                        type="video/mp4" />
+                </video>
+                <video class="centered" width="32%" controls muted loop autoplay>
                     <source
                         src="test_sample_433_after_vid_000.mp4"
                         type="video/mp4" />
