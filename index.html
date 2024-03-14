@@ -67,6 +67,14 @@
                 color: #aaa; 
             }
 
+            .imagecontent {
+                display: flex;
+                justify-content: center; /* 가로 중앙 정렬 */
+                align-items: center; /* 세로 중앙 정렬 */
+                height: 100vh; /* 뷰포트 높이에 맞춤 */
+                text-align: center; /* 텍스트 중앙 정렬 */
+            }
+
             @media (max-width: 400px) {
                 .render_window {
                     display: block;
@@ -116,14 +124,14 @@
                     <video class="centered" width="100%" controls muted loop autoplay>
                         <source src="video/MuDi_125.mp4" type="video/mp4"/>
                     </video>
-                    <p class="caption">
+                    <p class="imagecontent">
                         MuDi</p>
                 </figure>
                 <figure style="width: 49%;">
                     <video class="centered" width="100%" controls muted loop autoplay>
                         <source src="video/MuDiPro_125.mp4" type="video/mp4"/>
                     </video>
-                    <p class="content">MuDi-Pro</p>
+                    <p class="imagecontent">MuDi-Pro</p>
                 </figure>
             </div>
             
