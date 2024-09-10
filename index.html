@@ -134,6 +134,49 @@
                 <p>We present supplementary videos for few settings based on the quantitative results in the main paper. Samples generated from STRIVE and MuDi shows the typical trade-off between realism and controllability. <strong>Our novel model, MuDi-Pro, effectively addresses the trade-off between realism and controllability.</strong></p>
             </div>
 
+            <div class="section-title">Guidance Details</div>
+            <div class="content">
+                <table>
+                    <caption>Definitions of single guidance. <a href="https://example.com">Reference</a></caption>
+                    <thead>
+                      <tr>
+                        <th>Rule</th>
+                        <th>Rule Description</th>
+                        <th>Metrics</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Rule 1 -</td>
+                        <td>no vehicle collision</td>
+                        <td>$\sum_{i\neq j} \mathbbm{1} [\| (x_{i,t}, y_{i,t}) - (x_{j,t}, y_{j,t}) \| \leq \varepsilon ]$</td>
+                      </tr>
+                      <tr>
+                        <td>Rule 2 -</td>
+                        <td>no off-road</td>
+                        <td>$\sum_{i} \mathbbm{1} [\min_{w} \| (x_{i,t}, y_{i,t}) - (x_{\text{off-road}_w}, y_{\text{off-road}_w}) \| \leq \varepsilon ]$</td>
+                      </tr>
+                      <tr>
+                        <td>Rule 3 -</td>
+                        <td>goal waypoint</td>
+                        <td>$\sum_{i} \min_{t} \| (x_{i,t}, y_{i,t}) - (x_{\text{goal},i}, y_{\text{goal},i}) \|$</td>
+                      </tr>
+                      <tr>
+                        <td>Rule 4 -</td>
+                        <td>target speed</td>
+                        <td>$\sum_{i,t} |v_{i,t} - v_{\text{target},i,t}|$</td>
+                      </tr>
+                      <tr>
+                        <td>Rule 5 -</td>
+                        <td>max speed</td>
+                        <td>$\sum_{i,t} \max(0, v_{i,t} - v_{\text{limit},i})$</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  
+                
+            </div>
+
 
             <div class="section-title">No vehicle collision + No off-road</div>
             <div class="content">
@@ -293,7 +336,7 @@
 
             <div class="section-title">Contact</div>
             <div class="content">
-                <p>For any questions, please contact Seungjun Yu seungjunyu@postech.ac.kr.</p>
+                <p>For any questions, please contact Seungjun Yu <a href="seungjunyu@postech.ac.kr"></a></p>
             </div>
         </div>
 
