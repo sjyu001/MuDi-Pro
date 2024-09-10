@@ -16,11 +16,6 @@
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
         <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
         <script src="https://unpkg.com/@glidejs/glide"></script>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>MathJax Example</title>
-        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
         <style type="text/css">
             .side-text {
@@ -139,43 +134,18 @@
                 <p>We present supplementary videos for few settings based on the quantitative results in the main paper. Samples generated from STRIVE and MuDi shows the typical trade-off between realism and controllability. <strong>Our novel model, MuDi-Pro, effectively addresses the trade-off between realism and controllability.</strong></p>
             </div>
 
-            <div class="section-title">Guidance Details</div>
+            <div class="section-title">Guidance Rule Details</div>
+            <div class="teaser-image">
+                <figure style="width: 80%;">
+                    <img src="guidance_table.png" style="width:100%;">
+                </figure>
+            </div>
+
             <div class="content">
-                <table>
-                    <caption>Definitions of single guidance. </caption>
-                    <tr>
-                        <th>Rule</th>
-                        <th>Rule Description</th>
-                        <th>Metrics</th>
-                    </tr>
-                    <tr>
-                        <td>Rule 1 -</td>
-                        <td>no vehicle collision</td>
-                        <td>$\sum_{i\neq j} \mathbbm{1} [\| (x_{i,t}, y_{i,t}) - (x_{j,t}, y_{j,t}) \| \leq \varepsilon ]$</td>
-                    </tr>
-                    <tr>
-                        <td>Rule 2 -</td>
-                        <td>no off-road</td>
-                        <td>$\sum_{i} \mathbbm{1} [\min_{w} \| (x_{i,t}, y_{i,t}) - (x_{\text{off-road}_w}, y_{\text{off-road}_w}) \| \leq \varepsilon ]$</td>
-                    </tr>
-                    <tr>
-                        <td>Rule 3 -</td>
-                        <td>goal waypoint</td>
-                        <td>$\sum_{i} \min_{t} \| (x_{i,t}, y_{i,t}) - (x_{\text{goal},i}, y_{\text{goal},i}) \|$</td>
-                    </tr>
-                    <tr>
-                        <td>Rule 4 -</td>
-                        <td>target speed</td>
-                        <td>$\sum_{i,t} |v_{i,t} - v_{\text{target},i,t}|$</td>
-                    </tr>
-                    <tr>
-                        <td>Rule 5 -</td>
-                        <td>max speed</td>
-                        <td>$\sum_{i,t} \max(0, v_{i,t} - v_{\text{limit},i})$</td>
-                    </tr>
-                  </table>
-                  
-                
+                <p><strong>No vehicle collision(Rule 1) and no off-road(Rule 2).</strong> Rule 1 is designed to prevent collisions between vehicles, whereas Rule 2 is particularly vital since collisions involving non-ego vehicles with the environment are not accounted for during training. Ignoring Rule 2 could lead to a significant number of environmental collisions involving non-ego vehicles. </p>
+                <p><strong>Goal waypoint(Rule 3).</strong> The vehicle is required to pass through a specified goal waypoint at a predetermined time step within its future trajectory. </p>
+                <p><strong>Target speed(Rule 4).</strong> At each time step, vehicles must adhere to a specified speed. In this study, the target speed is set to the speed corresponding to the 75th percentile of the speeds within the initially generated trajectory of each agent. </p>
+                <p><strong>Max speed(Rule 5).</strong> Vehicles are not permitted to exceed a predefined maximum speed limit. Guidance is applied only to vehicles that surpass this threshold. For this work, the maximum allowable speed has been set at $9m/s$ for both cars and trucks. </p>
             </div>
 
 
