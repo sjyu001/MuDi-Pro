@@ -16,6 +16,11 @@
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
         <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
         <script src="https://unpkg.com/@glidejs/glide"></script>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>MathJax Example</title>
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
         <style type="text/css">
             .side-text {
@@ -137,41 +142,37 @@
             <div class="section-title">Guidance Details</div>
             <div class="content">
                 <table>
-                    <caption>Definitions of single guidance. <a href="https://example.com">Reference</a></caption>
-                    <thead>
-                      <tr>
+                    <caption>Definitions of single guidance. </caption>
+                    <tr>
                         <th>Rule</th>
                         <th>Rule Description</th>
                         <th>Metrics</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
+                    </tr>
+                    <tr>
                         <td>Rule 1 -</td>
                         <td>no vehicle collision</td>
                         <td>$\sum_{i\neq j} \mathbbm{1} [\| (x_{i,t}, y_{i,t}) - (x_{j,t}, y_{j,t}) \| \leq \varepsilon ]$</td>
-                      </tr>
-                      <tr>
+                    </tr>
+                    <tr>
                         <td>Rule 2 -</td>
                         <td>no off-road</td>
                         <td>$\sum_{i} \mathbbm{1} [\min_{w} \| (x_{i,t}, y_{i,t}) - (x_{\text{off-road}_w}, y_{\text{off-road}_w}) \| \leq \varepsilon ]$</td>
-                      </tr>
-                      <tr>
+                    </tr>
+                    <tr>
                         <td>Rule 3 -</td>
                         <td>goal waypoint</td>
                         <td>$\sum_{i} \min_{t} \| (x_{i,t}, y_{i,t}) - (x_{\text{goal},i}, y_{\text{goal},i}) \|$</td>
-                      </tr>
-                      <tr>
+                    </tr>
+                    <tr>
                         <td>Rule 4 -</td>
                         <td>target speed</td>
                         <td>$\sum_{i,t} |v_{i,t} - v_{\text{target},i,t}|$</td>
-                      </tr>
-                      <tr>
+                    </tr>
+                    <tr>
                         <td>Rule 5 -</td>
                         <td>max speed</td>
                         <td>$\sum_{i,t} \max(0, v_{i,t} - v_{\text{limit},i})$</td>
-                      </tr>
-                    </tbody>
+                    </tr>
                   </table>
                   
                 
