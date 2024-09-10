@@ -91,6 +91,13 @@
                 }
             }
         </style>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>MathJax Table</title>
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
     </head>
     <body>
         <div class="section">
@@ -138,6 +145,33 @@
             <div class="teaser-image">
                 <img src="guidance_table.png" style="width:90%;">
             </div>
+
+            <table border="1" cellspacing="0" cellpadding="5">
+                <tr>
+                    <th>Rule</th>
+                    <th>Metrics</th>
+                </tr>
+                <tr>
+                    <td>Rule 1 - no vehicle collision</td>
+                    <td>$$\sum_{i \neq j} \mathbb{1} \left[ \left\| (x_{i,t}, y_{i,t}) - (x_{j,t}, y_{j,t}) \right\| \leq \varepsilon \right]$$</td>
+                </tr>
+                <tr>
+                    <td>Rule 2 - no off-road</td>
+                    <td>$$\sum_{i} \mathbb{1} \left[ \min_{w} \left\| (x_{i,t}, y_{i,t}) - (x_{\text{off-road}_w}, y_{\text{off-road}_w}) \right\| \leq \varepsilon \right]$$</td>
+                </tr>
+                <tr>
+                    <td>Rule 3 - goal waypoint</td>
+                    <td>$$\sum_{i} \min_{t} \left\| (x_{i,t}, y_{i,t}) - (x_{\text{goal},i}, y_{\text{goal},i}) \right\|$$</td>
+                </tr>
+                <tr>
+                    <td>Rule 4 - target speed</td>
+                    <td>$$\sum_{i,t} \left| v_{i,t} - v_{\text{target},i,t} \right|$$</td>
+                </tr>
+                <tr>
+                    <td>Rule 5 - max speed</td>
+                    <td>$$\sum_{i,t} \max(0, v_{i,t} - v_{\text{limit},i})$$</td>
+                </tr>
+            </table>
 
             <div class="content">
                 <p><strong>No vehicle collision(Rule 1) and no off-road(Rule 2).</strong> Rule 1 is designed to prevent collisions between vehicles, whereas Rule 2 is particularly vital since collisions involving non-ego vehicles with the environment are not accounted for during training. Ignoring Rule 2 could lead to a significant number of environmental collisions involving non-ego vehicles. </p>
